@@ -11,19 +11,21 @@ const miPedidoDePizza = new Promise ((resolve, reject) => {
         if (statusPedido()) {
             resolve('¡Pedido exitoso! Su Pizza está en camino.');
         } else {
-            reject ('¡Ocurrio un error porfavor! intente nuevamente')
+            reject ('¡Ocurrio un error. porfavor intente nuevamente.')
         }
     }, 3000);
 });
 
 const manejarPedido = (mensajeDeConfirmacion) =>  {
-    console.log(mensajeeConfirmacion);
+    console.log(mensajeDeConfirmacion);
 };
 
 const rechazarPedido = (mensajeDeError) => {
     console.log(mensajeDeError);
 }; 
 
+// miPedidoDePizza.then(manejarPedido, rechazarPedido);
+
 miPedidoDePizza
-    .then(manejarPedido) 
+    .then(manejarPedido)
     .catch(rechazarPedido);

@@ -1,6 +1,6 @@
 function ordenarProducto(producto) {
     return new Promise((resolve, reject) => {
-        console.log(`ordenando: ${producto} de YisusCapetillo`);
+        console.log(`Ordenando: ${producto} de YisusCapetillo`);
         setTimeout(() => {
             if (producto === 'bebida') {
                 resolve ('Ordenando una bebida berry pearls de Starbucks');
@@ -13,8 +13,8 @@ function ordenarProducto(producto) {
 
 function procesarPedido(respuesta) {
     return new Promise(resolve => {
-        console.log('procesando respuesta...');
-        console.log(`la respuesta fue: "${respuesta}"`);
+        console.log('Procesando respuesta...');
+        console.log(`La respuesta fue: "${respuesta}"`);
         setTimeout(() => {
             resolve('Gracias por tu compra. Disfruta tu bebida de Starbucks');
         }, 4000 );
