@@ -47,6 +47,8 @@ server.get('/api/cursos/programacion/:lenguaje/:nivel', (req, res) => {
         return res.status(404).send(`No se encontraron cursos de ${lenguaje} de nivel ${nivel}`);
     }
 
+console.log(req.query.ordenar);
+
     res.send(JSON.stringify(resultados));
 
 });
@@ -56,7 +58,7 @@ server.get('/api/cursos/programacion/:lenguaje/:nivel', (req, res) => {
 
 
 
-// Ejemplo de Matematicas
+// Ejemplo curso de Matematicas
 server.get('/api/cursos/matematicas', (req, res) => {
     res.send(JSON.stringify(infoCursos.matematicas));
 });
